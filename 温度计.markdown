@@ -1,0 +1,72 @@
+# 基于FPGA的温度计
+## 题目要求：
++ Outdoor and indoor temperatures are read. The result is reported on an LCD display. With the push of a button, it should be possible to switch between outside and inside temperature. In addition, it must be possible to see the max and min temperature. The Max / Min temperature must be reset.  
++ DS18S20 is used for temperature reading. The result is reported on a display (DMC 16117A)  
++ Variant: the outdoor temperature is transmitted wirelessly to the indoor unit.  
++ Difficulty level 4, temperature circuit that does not give off a sign of life until it is treated correctly. When you understand the function of the circuits, are the project simple.
++ VHDL heavy! With option / variant 5+
++ Start by using the temperature sensor and 7-sed display on the FPGA board.
+
+## 大概的模块划分
+### FPGA+周围电路
+#### 温度模块
++ 显示
+    + LCD显示：  
+        DMC 16117A
+    + 数码管显示
++ 板上资源
+    + 按钮
++ 实时时钟
+    + 时间戳
+        在显示最高最低温度的时候显示时间戳
+    + 日历+时钟
++ 存储模块
+    + 存储温度 导出csv？
+
+
+### 传感器模块
++ 通信：
+    + 蓝牙板间通信
+    + wifi 上位机通信（感觉不会实现）
++ 传感器
+    + DS18S20 
+        + 支持 1-Wire 接口，可用于多个传感器连接的应用
+    + 湿度传感器
+    + 加速器传感器  
+        检测模块有没有倾斜？
++ 电源管理 
+    + 电池盒？
++ 语音播报
+    + 播报温度
+---
+## 大概的技术路线？
+### step 1 
+先完成FPGA板上的温度传感器和数码管完成温度显示功能 （室内温度检测）
+
++ XADC （I2C/SPI 接口 ） 
+    + 温度范围：-40°C 到 +125°C
+    + 精度：±1°C 左右
+    + 感觉有机会可以换成DS18S20 精度更高
+    + 将 12-bit 的温度数据转换为摄氏温度，显示在 7 段数码管 上。
+    + 实现基本按键控制：切换显示当前温度、最高温度、最低温度。
+### step 2
+然后使用DS18S20完成温度检测
++ 使用 DS18S20 温度传感器，通过 1-Wire 接口 与 FPGA 连接。
++ 使用 FPGA 上的一个 GPIO 引脚作为 1-Wire 数据线，外加 4.7kΩ 上拉电阻（看数据手册）
+### step 3
+尝试无线模块和板子进行通信
+蓝牙模块 ——> uart模块
+### step 4
+完成无线测量温度
+### step 5
+LCD显示
+### step 6
+MicroSD 卡模块 SPI接口 储存温度
+CSV格式导出？
+### +++
++ 实时时钟
++ 湿度监测
+
+
+
+
