@@ -1,3 +1,24 @@
+----------------------------------------------------------------------------------
+-- Group: EDA234 Group 1
+-- Author: Ziheng
+-- 
+-- Create Date: 2024/11/17 18:32:59
+-- Design Name: 
+-- Module Name: uart_ctrl - arch_uart_ctrl
+-- Project Name: 
+-- Target Devices: 
+-- Tool Versions: 
+-- Description: 
+-- 
+-- Dependencies: 
+-- 
+-- Revision:
+-- Revision 0.01 - File Created
+-- Additional Comments:
+-- 
+----------------------------------------------------------------------------------
+
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
