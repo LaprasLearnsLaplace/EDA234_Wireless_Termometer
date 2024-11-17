@@ -100,6 +100,6 @@ begin
         UART_CTS <= '0';
       end if;
     end if;
-  end process SEND_DATA_PROC;
+  end process Send_data_proc;
 
 end arch_uart_ctrl;
