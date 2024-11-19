@@ -67,6 +67,21 @@ CSV格式导出？
 + 实时时钟
 + 湿度监测
 
+## 框图 
+### 2024/11/13
+[block_diagram_group1.pdf](https://github.com/user-attachments/files/17822492/block_diagram_group1.pdf)
+![block_diagram_group1 (1)](https://github.com/user-attachments/assets/2ae56633-3e25-440f-bdae-4395370347bf)
+
+### 2024/11/19
+[group1_block_diagram_1119.pdf](https://github.com/user-attachments/files/17822508/group1_block_diagram_1119.pdf)
+![group1_block_diagram_1119](https://github.com/user-attachments/assets/d6945d52-46dd-47d5-85a9-7606f8d365d6)
+
+Refine the block diagram and highlight component types (type numbers) and signals.
+
+
+
+
+
 
 
 
