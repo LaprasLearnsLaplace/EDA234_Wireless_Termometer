@@ -79,7 +79,74 @@ CSV格式导出？
 Refine the block diagram and highlight component types (type numbers) and signals.
 
 
+### I2C 状态图
+```mermaid
+stateDiagram-v2
+    [*] --> idle
+    
+    idle --> start: en=1
+    idle --> idle: en=0
 
+    start --> command
+    
+    command --> command: bit_cnt>0
+    command --> slv_ack1: bit_cnt=0
+    
+    slv_ack1 --> wr: addr_rw(0)=0/write
+    slv_ack1 --> rd: addr_rw(0)=1/read
+    
+    wr --> wr: bit_cnt>0
+    wr --> slv_ack2: bit_cnt=0
+    
+    rd --> rd: bit_cnt>0
+    rd --> mstr_ack: bit_cnt=0
+    
+    slv_ack2 --> wr: en=1 & same addr & write
+    slv_ack2 --> start: en=1 & different addr
+    slv_ack2 --> stop: en=0
+    
+    mstr_ack --> rd: en=1 & same addr & read
+    mstr_ack --> start: en=1 & different addr
+    mstr_ack --> stop: en=0
+    
+    stop --> idle
+
+    note right of idle
+        等待启动信号
+    end note
+
+    note right of start
+        生成起始条件
+    end note
+
+    note right of command
+        发送地址和读写命令
+    end note
+
+    note right of slv_ack1
+        等待从机确认(指令)
+    end note
+
+    note right of wr
+        写数据字节
+    end note
+
+    note right of rd
+        读数据字节
+    end note
+
+    note right of slv_ack2
+        等待从机确认(写)
+    end note
+
+    note right of mstr_ack
+        主机确认(读)
+    end note
+
+    note right of stop
+        生成停止条件
+    end note
+```
 
 
 
