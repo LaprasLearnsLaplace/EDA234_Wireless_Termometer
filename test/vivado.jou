@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Dec 10 16:10:18 2024
+# Process ID: 3668
+# Current directory: C:/Users/A/Desktop/EDA234/test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28976 C:\Users\A\Desktop\EDA234\test\test.xpr
+# Log file: C:/Users/A/Desktop/EDA234/test/vivado.log
+# Journal file: C:/Users/A/Desktop/EDA234/test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/A/Desktop/EDA234/test/test.xpr
+create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.2 -module_name fifo_generator_0 -dir c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip
+set_property -dict [list CONFIG.INTERFACE_TYPE {Native} CONFIG.Input_Data_Width {8} CONFIG.Output_Data_Width {8} CONFIG.Use_Embedded_Registers {false} CONFIG.Reset_Pin {false} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Use_Dout_Reset {false} CONFIG.Almost_Empty_Flag {false} CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wach {15} CONFIG.Empty_Threshold_Assert_Value_wach {14} CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wrch {15} CONFIG.Empty_Threshold_Assert_Value_wrch {14} CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_rach {15} CONFIG.Empty_Threshold_Assert_Value_rach {14} CONFIG.Enable_Safety_Circuit {false}] [get_ips fifo_generator_0]
+generate_target {instantiation_template} [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+generate_target all [get_files  c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+launch_runs -jobs 20 fifo_generator_0_synth_1
+export_simulation -of_objects [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/Users/A/Desktop/EDA234/test/test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A/Desktop/EDA234/test/test.ip_user_files -ipstatic_source_dir C:/Users/A/Desktop/EDA234/test/test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Xlib} {questa=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/questa} {riviera=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/riviera} {activehdl=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset fifo_generator_0 c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci
+file delete -force c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0
+create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.2 -module_name fifo_generator_0 -dir c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip
+set_property -dict [list CONFIG.Input_Data_Width {8} CONFIG.Output_Data_Width {8}] [get_ips fifo_generator_0]
+generate_target {instantiation_template} [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+generate_target all [get_files  c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+catch { config_ip_cache -export [get_ips -all fifo_generator_0] }
+export_ip_user_files -of_objects [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci]
+launch_runs -jobs 20 fifo_generator_0_synth_1
+export_simulation -of_objects [get_files c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci] -directory C:/Users/A/Desktop/EDA234/test/test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A/Desktop/EDA234/test/test.ip_user_files -ipstatic_source_dir C:/Users/A/Desktop/EDA234/test/test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Xilinx/Xlib} {questa=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/questa} {riviera=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/riviera} {activehdl=C:/Users/A/Desktop/EDA234/test/test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+set_property is_enabled false [get_files  C:/Users/A/Desktop/Nexys4_UART-master/IP/FIFO_8to8.xci]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Nexys4_UART [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:\Users\A\Downloads\Nexys4_UART.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A/Downloads/Nexys4_UART.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+add_files -norecurse C:/Users/A/Desktop/Nexys4_UART-master/VHDL/UART_TX.vhd
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:\Users\A\Downloads\Nexys4_UART.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A/Downloads/Nexys4_UART.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A/Downloads/Nexys4_UART.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
