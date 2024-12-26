@@ -1,3 +1,6 @@
+--EDA234 Group1
+--Fu Xuqi 20241206
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
