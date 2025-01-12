@@ -1,0 +1,39 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[30]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[1]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[4]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[26]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[27]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[31]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[24]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[0]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[2]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[5]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[3]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[29]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[25]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                           DDR2_inst/Ram/ram_cen_int_reg/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[28]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                           DDR2_inst/Ram/ram_oen_int_reg/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                           DDR2_inst/Ram/ram_wen_int_reg/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                DDR2_inst/Ram/ram_dq_i_int3_reg[23]_srl3/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[6]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[27]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[30]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[6]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[7]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[25]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[28]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[29]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[26]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                      DDR2_inst/Ram/ram_dq_i_int_reg[24]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[7]/D|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[0]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[3]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[5]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[1]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[2]/S|
+|         clk_out1_clk_wiz |                clk_pll_i |                                                                       DDR2_inst/Ram/ram_dq_i_int_reg[4]/S|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

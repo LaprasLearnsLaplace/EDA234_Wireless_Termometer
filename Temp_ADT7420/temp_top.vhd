@@ -12,8 +12,6 @@ entity temp_top is
     clk     : in std_logic;
     TMP_SDA : inout std_logic;
     TMP_SCL : out std_logic;
-    SEG     : out std_logic_vector(6 downto 0);
-    AN      : out std_logic_vector(7 downto 0);
     ADT7420_DATA : out std_logic_vector(7 downto 0)
   );
 end temp_top;
@@ -23,13 +21,6 @@ architecture Behavioral of temp_top is
   signal wire_200KHz        : std_logic;
   signal wire_temp_data     : std_logic_vector(7 downto 0);
   signal tMSB, tLSB         : std_logic_vector(7 downto 0) := (others => '0');
-
-  component temp_vi
-    port (
-      clk       : in std_logic;
-      probe_in0 : in std_logic_vector(7 downto 0)
-    );
-  end component;
 
   component i2c_ctrl
     port (
@@ -48,35 +39,7 @@ architecture Behavioral of temp_top is
     );
   end component;
 
-  component seg7
-    port (
-      clk        : in std_logic;
-      data       : in std_logic_vector(7 downto 0);
-      SEG        : out std_logic_vector(6 downto 0);
-      AN         : out std_logic_vector(7 downto 0)
-    );
-  end component;
-
 begin
-
-  -- temp_virtua_probe0 : temp_vi
-  -- port map
-  -- (
-  --   clk       => clk,
-  --   probe_in0 => wire_temp_data
-  -- );
-  -- temp_virtua_probe1 : temp_vi
-  -- port map
-  -- (
-  --   clk       => clk,
-  --   probe_in0 => tMSB
-  -- );
-  -- temp_virtua_probe2 : temp_vi
-  -- port map
-  -- (
-  --   clk       => clk,
-  --   probe_in0 => tLSB
-  -- );
 
   clk_200KHz_inst : clk_200KHz
   port map
@@ -94,15 +57,6 @@ begin
     SCL        => TMP_SCL,
     tMSB_A     => tMSB,
     tLSB_A     => tLSB
-  );
-
-  seg7_inst : seg7
-  port map
-  (
-    clk        => clk,
-    data       => wire_temp_data,
-    SEG        => SEG,
-    AN         => AN
   );
 
   ADT7420_DATA <= wire_temp_data;

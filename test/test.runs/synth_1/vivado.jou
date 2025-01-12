@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Dec 16 00:00:46 2024
-# Process ID: 18176
+# Start of session at: Tue Dec 24 18:33:07 2024
+# Process ID: 12360
 # Current directory: C:/Users/A/Desktop/EDA234/test/test.runs/synth_1
 # Command line: vivado.exe -log uart_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_top.tcl
 # Log file: C:/Users/A/Desktop/EDA234/test/test.runs/synth_1/uart_top.vds

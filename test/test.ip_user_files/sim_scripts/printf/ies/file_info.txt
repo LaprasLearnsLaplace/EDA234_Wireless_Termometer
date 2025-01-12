@@ -1,0 +1,2 @@
+printf.v,verilog,xil_defaultlib,../../../../test.srcs/sources_1/ip/printf/sim/printf.v,incdir="../../../../test.srcs/sources_1/ip/printf/hdl/verilog"incdir="../../../../test.srcs/sources_1/ip/printf/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

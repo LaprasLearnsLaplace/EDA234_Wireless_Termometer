@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734300044">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1735057985">
   <File Type="BITSTR-BMM" Name="uart_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="uart_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="uart_top_timing_summary_init.rpt"/>
@@ -77,25 +77,25 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../UART_Controller/uart_rx.vhdl">
+    <File Path="$PPRDIR/../../UART/uart_top.vhdl">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../UART_Controller/uart_top.vhdl">
+    <File Path="$PPRDIR/../../UART/uart_rx.vhdl">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../UART_Controller/uart_tx.vhdl">
+    <File Path="$PPRDIR/../../UART/fifo.vhdl">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../UART_Controller/fifo.vhdl">
+    <File Path="$PPRDIR/../../UART/uart_tx.vhdl">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -136,4 +136,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="printf"/>
 </GenRun>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Dec 19 18:47:07 2024
+# Process ID: 23524
+# Current directory: C:/Users/A/Desktop/EDA234/THERMO/THERMO.runs/clk_wiz_synth_1
+# Command line: vivado.exe -log clk_wiz.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz.tcl
+# Log file: C:/Users/A/Desktop/EDA234/THERMO/THERMO.runs/clk_wiz_synth_1/clk_wiz.vds
+# Journal file: C:/Users/A/Desktop/EDA234/THERMO/THERMO.runs/clk_wiz_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_wiz.tcl -notrace

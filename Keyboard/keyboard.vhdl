@@ -8,10 +8,10 @@ entity keyboard is
     Port (
         clk             : in  std_logic;
         reset             : in  std_logic;
-        keyboard4x4_col : in  std_logic_vector(3 downto 0);    -- 行输入
-        keyboard4x4_row : out std_logic_vector(3 downto 0);    -- 列输出
-        key_num         : out std_logic_vector(3 downto 0);    -- 按键编号输出
-        flag_key        : out std_logic;                       -- 有效性判断
+        keyboard4x4_col : in  std_logic_vector(3 downto 0);    
+        keyboard4x4_row : out std_logic_vector(3 downto 0);    
+        key_num         : out std_logic_vector(3 downto 0);    
+        flag_key        : out std_logic;                      
         Seg             : out std_logic_vector(6 downto 0);    
         AN              : out std_logic_vector(7 downto 0);
         temp_set        : out std_logic_vector(7 downto 0) 
@@ -21,57 +21,54 @@ end keyboard;
 architecture keyboard_arch of keyboard is
     constant T_10ms : integer := 50000; -- 50ms，1MHz
 
-    -- 状态机状态定义
+
     type state_type is (STATE_OFF, STATE_ON_SHAKE, STATE_OUT_SCAN,
                         STATE_SCAN_WAIT0, STATE_SCAN_WAIT1, STATE_SCAN_WAIT2, STATE_SCAN_WAIT3,
                         STATE_CHECK_PRESS, STATE_OFF_SHAKE);
     signal c_state : state_type := STATE_OFF;
     signal n_state : state_type;
 
-    -- 行信号同步
+
     signal row_r  : std_logic_vector(3 downto 0) := "1111";
     signal row_rr : std_logic_vector(3 downto 0) := "1111";
 
-    -- 10ms 计数器
+
     signal cnt_10ms : integer range 0 to T_10ms := 0;
 
-    -- 行列组合信号
+   
     signal row_col      : std_logic_vector(7 downto 0) := "00000000";
     signal flag_row_col : std_logic := '0';
 
-    -- 内部信号
+
     signal keyboard4x4_row_int : std_logic_vector(3 downto 0) := "0000";
     signal key_num_int         : std_logic_vector(3 downto 0) := "0000";
     signal flag_key_int        : std_logic := '0';
     signal Seg_int             : std_logic_vector(6 downto 0) := "1111111";
 
-    -- 分频信号
+   
     signal clk_div : unsigned(19 downto 0) := (others => '0');
     signal scan_clk : std_logic;
 
-    -- 数码管多路复用计数器
     signal disp_cnt : integer range 0 to 999 := 0; -- 用于多路复用计数
     signal disp_sel : unsigned(2 downto 0) := "000"; -- 显示选择信号
 
-    -- 按键按压计数器
+ 
     signal press_count : integer range 0 to 3 := 0;
 
-    -- key_num_int1 和 key_num_int2 用于存储两个按键编号
+
     signal key_num_int1 : std_logic_vector(3 downto 0) := "0000";
     signal key_num_int2 : std_logic_vector(3 downto 0) := "0000";
     signal key_num1_valid : std_logic := '0';
     signal key_num2_valid : std_logic := '0';
 
-    -- key_num_int1 和 key_num_int2 映射到 7 段显示
+
     signal key_seg1 : std_logic_vector(6 downto 0) := "1111111";
     signal key_seg2 : std_logic_vector(6 downto 0) := "1111111";
 
-    -- 延迟信号
     signal flag_row_col_prev : std_logic := '0';
 
 begin
-    -- 分频生成 1MHz 的 scan_clk
-    -- 假设输入 clk 为 100MHz
+
     process(clk, reset)
     begin
         if reset = '1' then
@@ -85,10 +82,10 @@ begin
         end if;
     end process;
 
-    -- 生成 scan_clk = 1MHz
+
     scan_clk <= '1' when clk_div < 50 else '0'; -- 1MHz, '1' for first half of the cycle
 
-    -- 行信号同步
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -100,7 +97,7 @@ begin
         end if;
     end process;
 
-    -- 状态寄存器
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -110,7 +107,7 @@ begin
         end if;
     end process;
 
-    -- 下一个状态逻辑
+
     process(c_state, row_rr, cnt_10ms, keyboard4x4_row_int)
     begin
         case c_state is
@@ -168,7 +165,7 @@ begin
         end case;
     end process;
 
-    -- 输出逻辑
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -214,7 +211,7 @@ begin
         end if;
     end process;
 
-    -- 延迟 flag_row_col 信号，确保 key_num_int 已经更新
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -224,14 +221,13 @@ begin
         end if;
     end process;
 
-    -- 行列组合信号捕获
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
             row_col <= "00000000";
         elsif rising_edge(scan_clk) then
             if (c_state = STATE_CHECK_PRESS) and (row_rr /= "1111") then
-                -- 正确组合顺序：行 & 列
                 row_col <= row_rr & keyboard4x4_row_int;
             else
                 row_col <= row_col;
@@ -239,7 +235,6 @@ begin
         end if;
     end process;
 
-    -- 有效性判断
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -253,7 +248,7 @@ begin
         end if;
     end process;
 
-    -- 按键编号映射
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -282,7 +277,7 @@ begin
         end if;
     end process;
 
-    -- 有效后输出
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -295,7 +290,7 @@ begin
 
 
 
-    -- key_num_int1 和 key_num_int2 的按键输入缓存
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
@@ -321,6 +316,7 @@ begin
                             (to_integer(unsigned(key_num_int2)) * 10) + 
                             to_integer(unsigned(key_num_int1)),
                             temp_set'length)) ;
+
                         press_count <= 3;
                     when 3 =>
                         key_num_int1 <= "0000";
@@ -340,7 +336,7 @@ begin
     end process;
 
 
-    -- key_num_int1 映射到 7 段显示
+
     process(key_num_int1)
     begin
         case key_num_int1 is
@@ -364,7 +360,7 @@ begin
         end case;
     end process;
 
-    -- key_num_int2 映射到 7 段显示
+
     process(key_num_int2)
     begin
         case key_num_int2 is
@@ -388,16 +384,15 @@ begin
         end case;
     end process;
 
-    -- 数码管多路复用与显示
+
     process(scan_clk, reset)
     begin
         if reset = '1' then
             disp_sel <= "000";
             disp_cnt <= 0;
-            Seg_int <= "1110111"; -- 初始显示 "__"
-            AN <= "11111101";      -- 激活第2位
+            Seg_int <= "1110111"; 
+            AN <= "11111101";     
         elsif rising_edge(scan_clk) then
-            -- 多路复用计数器，控制刷新频率
             if disp_cnt < 999 then
                 disp_cnt <= disp_cnt + 1;
             else
@@ -409,37 +404,31 @@ begin
                 end if;
             end if;
 
-            -- 根据 disp_sel 信号选择激活的数码管位并显示相应内容
             case disp_sel is
                 when "000" => 
-                    -- 第1位数码管
                     if key_num1_valid = '1' then
-                        AN <= "10111111"; -- 第1位激活
-                        Seg_int <= key_seg1; -- 显示 key_num_int2
+                        AN <= "10111111"; 
+                        Seg_int <= key_seg1; 
                     else
-                        AN <= "10111111"; -- 第1位激活
-                        Seg_int <= "1110111"; -- 显示 "__"
+                        AN <= "10111111"; 
+                        Seg_int <= "1110111"; 
                     end if;
                 when "001" =>
-                    -- 第2位数码管
                     if key_num2_valid = '1' then
-                        AN <= "01111111"; -- 第2位激活
-                        Seg_int <= key_seg2; -- 显示 key_num_int1
+                        AN <= "01111111"; 
+                        Seg_int <= key_seg2; 
                     else
-                        AN <= "01111111"; -- 第2位激活
-                        Seg_int <= "1110111"; -- 显示 "__"
+                        AN <= "01111111"; 
+                        Seg_int <= "1110111"; 
                     end if;
                 when others =>
-                    -- 关闭其他数码管位
-                    AN <= "11111111"; -- 关闭所有位
-                    Seg_int <= "1111111"; -- 所有段关闭
+                    AN <= "11111111"; 
+                    Seg_int <= "1111111"; 
             end case;
         end if;
     end process;
 
-    -- 输出赋值
+
     Seg <= Seg_int;
-    -- AN 信号已经在上述进程中被驱动，不再需要其他赋值
-    -- AN <= AN_int;
 
 end keyboard_arch;

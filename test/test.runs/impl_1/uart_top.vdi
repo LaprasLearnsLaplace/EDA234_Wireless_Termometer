@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Dec 16 00:01:15 2024
-# Process ID: 15728
+# Start of session at: Tue Dec 24 18:33:36 2024
+# Process ID: 19084
 # Current directory: C:/Users/A/Desktop/EDA234/test/test.runs/impl_1
 # Command line: vivado.exe -log uart_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_top.tcl -notrace
 # Log file: C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top.vdi
@@ -14,149 +14,226 @@ Command: link_design -top uart_top -part xc7a100tcsg324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 698.309 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 713.469 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
+CRITICAL WARNING: [Designutils 20-1281] Could not find module 'printf'. The XDC file c:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/printf/printf.xdc will not be read for this module.
 Parsing XDC File [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc]
-WARNING: [Vivado 12-584] No ports matched 'nRST'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:13]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:10]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:10]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:10]
+get_clocks: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1403.430 ; gain = 574.008
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out1_clk_wiz]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:10]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-5201] set_clock_groups: cannot set the clock group when only one non-empty group remains. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:10]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:13]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:13]
+CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-to [get_clocks clk_out1_clk_wiz]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:13]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:14]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:14]
+CRITICAL WARNING: [Vivado 12-4739] set_max_delay:No valid object(s) found for '-from [get_clocks clk_out1_clk_wiz]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:14]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-507] No nets matched 'clk_200MHz_i_IBUF'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:15]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'key_num[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'mem_sw'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:18]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'key_num[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:41]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'key_num[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:42]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'key_num[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:43]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'flag_key'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:44]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:45]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:46]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:47]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:48]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED16_R'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:61]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:61]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SEG[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'LED17_G'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:63]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:63]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'SEG[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:68]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:68]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'SEG[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:69]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:69]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'SEG[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:70]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:70]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'SEG[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:71]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'SEG[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:72]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:72]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pb'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'SEG[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SEG[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:79]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:79]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'AN[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:80]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'AN[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:81]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'AN[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'AN[7]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mrst'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:87]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:87]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[7]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'BTNL'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:89]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'BTNR'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:90]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'temp_sw'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[4]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:96]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:96]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[5]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:97]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:97]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_rw'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[6]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:98]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:98]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_e'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[7]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:99]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:99]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_db[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:100]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'lcd_rs'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:102]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:102]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:106]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:106]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:107]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:107]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:108]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:108]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'lcd_rw'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:109]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:109]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'lcd_e'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd_db[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:111]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:111]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:112]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:112]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'lcd_rs'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:113]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:113]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:114]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:117]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'TMP_SCL'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:171]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:171]
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:118]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'TMP_SDA'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:172]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_row[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[0]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[1]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[2]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'keyboard4x4_col[3]'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'speaker_out'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'TMP_SCL'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'TMP_SDA'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:183]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:183]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RXD'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'TXD'. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc:199]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 823.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1403.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-7 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+11 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1403.430 ; gain = 978.434
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -167,57 +244,57 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.360 . Memory (MB): peak = 848.473 ; gain = 20.688
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.331 . Memory (MB): peak = 1403.430 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1f9567c38
+Ending Cache Timing Information Task | Checksum: 11b988856
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1385.961 ; gain = 537.488
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1420.691 ; gain = 17.262
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1f9567c38
+Phase 1 Retarget | Checksum: 11b988856
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 1f9567c38
+Phase 2 Constant propagation | Checksum: 11b988856
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 24b08975a
+Phase 3 Sweep | Checksum: 1e1e813e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Phase 4 BUFG optimization | Checksum: 24b08975a
+Phase 4 BUFG optimization | Checksum: 1e1e813e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 24b08975a
+Phase 5 Shift Register Optimization | Checksum: 1e1e813e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 24b08975a
+Phase 6 Post Processing Netlist | Checksum: 1e1e813e1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -238,66 +315,41 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1571.324 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1216aab59
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: ee3e9440
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1571.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Pwropt 34-9] Applying IDT optimizations ...
-INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=5.630 | TNS=0.000 |
-Running Vector-less Activity Propagation...
+Ending Power Optimization Task | Checksum: ee3e9440
 
-Finished Running Vector-less Activity Propagation
-
-
-Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 1 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 13b22050b
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 13b22050b
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.293 . Memory (MB): peak = 1707.648 ; gain = 136.324
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: ee3e9440
 
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 1be1520a4
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 1be1520a4
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1be1520a4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: ee3e9440
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-34 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+31 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1707.648 ; gain = 879.863
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1600.668 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file uart_top_drc_opted.rpt -pb uart_top_drc_opted.pb -rpx uart_top_drc_opted.rpx
 Command: report_drc -file uart_top_drc_opted.rpt -pb uart_top_drc_opted.pb -rpx uart_top_drc_opted.rpx
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top_drc_opted.rpt.
 report_drc completed successfully
@@ -318,43 +370,42 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 10e7c790a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e32af9b9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 149b4630b
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1a088f2da
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.474 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.431 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 2278dd8f3
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e02e618b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.530 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.474 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 2278dd8f3
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e02e618b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.532 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 2278dd8f3
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.475 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1e02e618b
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.533 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.478 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1efc410d4
+Phase 2.1 Floorplanning | Checksum: 2359f3616
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.567 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.508 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 11 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 4 nets or cells. Created 0 new cell, deleted 4 existing cells and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -364,7 +415,7 @@ INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization wa
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -373,66 +424,66 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |              4  |                     4  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |              4  |                     4  |           0  |           3  |  00:00:00  |
+|  Total                                            |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1dced6279
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 2381aab50
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 1ae86dd20
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.732 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 22e10c6f8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1ae86dd20
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.762 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 22e10c6f8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.764 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 13dc6102a
+Phase 3.1 Commit Multi Column Macros | Checksum: 1d8217470
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.782 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 22d330bed
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 239df139c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.814 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 210dacbdb
+Phase 3.3 Area Swap Optimization | Checksum: 1eaff37bc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.818 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1b5cf2129
+Phase 3.4 Pipeline Register Optimization | Checksum: 1eaff37bc
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.818 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 21e146fe0
+Phase 3.5 Small Shape Detail Placement | Checksum: 1ab6bec9f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.890 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 237f3241e
+Phase 3.6 Re-assign LUT pins | Checksum: 1cc10019f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.893 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 230fed284
+Phase 3.7 Pipeline Register Optimization | Checksum: 1cc10019f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 230fed284
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.894 . Memory (MB): peak = 1600.668 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1cc10019f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.894 . Memory (MB): peak = 1600.668 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -440,73 +491,73 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 2906f5211
+Post Placement Optimization Initialization | Checksum: 203c5dfe4
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 2906f5211
+Phase 4.1.1.1 BUFG Insertion | Checksum: 203c5dfe4
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=5.483. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 2393688eb
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.926 . Memory (MB): peak = 1608.477 ; gain = 7.809
+INFO: [Place 30-746] Post Placement Timing Summary WNS=5.703. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 20414e51c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 2393688eb
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.927 . Memory (MB): peak = 1608.477 ; gain = 7.809
+Phase 4.1 Post Commit Optimization | Checksum: 20414e51c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.927 . Memory (MB): peak = 1608.477 ; gain = 7.809
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 2393688eb
+Phase 4.2 Post Placement Cleanup | Checksum: 20414e51c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.929 . Memory (MB): peak = 1608.477 ; gain = 7.809
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 2393688eb
+Phase 4.3 Placer Reporting | Checksum: 20414e51c
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.930 . Memory (MB): peak = 1608.477 ; gain = 7.809
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1c3719875
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1608.477 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 13eb42783
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1c3719875
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.932 . Memory (MB): peak = 1608.477 ; gain = 7.809
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13eb42783
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
-Ending Placer Task | Checksum: 12e000e12
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.932 . Memory (MB): peak = 1608.477 ; gain = 7.809
+Ending Placer Task | Checksum: 662f11e0
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.932 . Memory (MB): peak = 1608.477 ; gain = 7.809
 INFO: [Common 17-83] Releasing license: Implementation
-66 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+60 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1608.477 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1608.488 ; gain = 0.012
 INFO: [Common 17-1381] The checkpoint 'C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file uart_top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1707.648 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1608.488 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file uart_top_utilization_placed.rpt -pb uart_top_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file uart_top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1707.648 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1608.488 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.250 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-75 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+69 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1620.938 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1707.648 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1638.812 ; gain = 17.875
 INFO: [Common 17-1381] The checkpoint 'C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
@@ -519,41 +570,41 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: b8da053d ConstDB: 0 ShapeSum: 752608d5 RouteDB: 0
+Checksum: PlaceDB: 3bd55261 ConstDB: 0 ShapeSum: 2a59bf7f RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 5ec913a9
+Phase 1 Build RT Design | Checksum: b580ed01
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1763.934 ; gain = 56.285
-Post Restoration Checksum: NetGraph: 479e48a5 NumContArr: 172acb04 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1760.414 ; gain = 112.547
+Post Restoration Checksum: NetGraph: 4e7ed3e8 NumContArr: 67021919 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 5ec913a9
+Phase 2.1 Create Timer | Checksum: b580ed01
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1763.934 ; gain = 56.285
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1760.469 ; gain = 112.602
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 5ec913a9
+Phase 2.2 Fix Topology Constraints | Checksum: b580ed01
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1770.094 ; gain = 62.445
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1766.504 ; gain = 118.637
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 5ec913a9
+Phase 2.3 Pre Route Cleanup | Checksum: b580ed01
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1770.094 ; gain = 62.445
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1766.504 ; gain = 118.637
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 154c1c2b8
+Phase 2.4 Update Timing | Checksum: e87b3025
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.472  | TNS=0.000  | WHS=-0.176 | THS=-4.816 |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1774.430 ; gain = 126.562
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.685  | TNS=0.000  | WHS=-0.118 | THS=-0.666 |
 
-Phase 2 Router Initialization | Checksum: 15168bd13
+Phase 2 Router Initialization | Checksum: 11ad7cf27
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1774.430 ; gain = 126.562
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -561,77 +612,69 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 184
+  Number of Failed Nets               = 101
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 184
+  Number of Unrouted Nets             = 101
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1a944e8e3
+Phase 3 Initial Routing | Checksum: 17c5dcc59
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.402  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.675  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 239dd20e9
+Phase 4.1 Global Iteration 0 | Checksum: 1b090b9dc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
+Phase 4 Rip-up And Reroute | Checksum: 1b090b9dc
 
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.402  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.2 Global Iteration 1 | Checksum: 1ec057054
-
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
-Phase 4 Rip-up And Reroute | Checksum: 1ec057054
-
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 1ec057054
+Phase 5.1 Delay CleanUp | Checksum: 1b090b9dc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1ec057054
+Phase 5.2 Clock Skew Optimization | Checksum: 1b090b9dc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
-Phase 5 Delay and Skew Optimization | Checksum: 1ec057054
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
+Phase 5 Delay and Skew Optimization | Checksum: 1b090b9dc
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1c09afa29
+Phase 6.1.1 Update Timing | Checksum: 1b97e6624
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.489  | TNS=0.000  | WHS=0.111  | THS=0.000  |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=5.771  | TNS=0.000  | WHS=0.169  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1c23b8a38
+Phase 6.1 Hold Fix Iter | Checksum: 1b97e6624
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
-Phase 6 Post Hold Fix | Checksum: 1c23b8a38
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
+Phase 6 Post Hold Fix | Checksum: 1b97e6624
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0196283 %
-  Global Horizontal Routing Utilization  = 0.019821 %
+  Global Vertical Routing Utilization    = 0.00609305 %
+  Global Horizontal Routing Utilization  = 0.00816994 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -641,45 +684,45 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 152479717
+Phase 7 Route finalize | Checksum: 22be29564
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.078 ; gain = 70.430
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1775.215 ; gain = 127.348
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 152479717
+Phase 8 Verifying routed nets | Checksum: 22be29564
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.883 ; gain = 71.234
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1777.230 ; gain = 129.363
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 17616b68a
+Phase 9 Depositing Routes | Checksum: 22ab7cb72
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.883 ; gain = 71.234
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1777.230 ; gain = 129.363
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=5.489  | TNS=0.000  | WHS=0.111  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=5.771  | TNS=0.000  | WHS=0.169  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 17616b68a
+Phase 10 Post Router Timing | Checksum: 22ab7cb72
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.883 ; gain = 71.234
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1777.230 ; gain = 129.363
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1778.883 ; gain = 71.234
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1777.230 ; gain = 129.363
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-90 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+83 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1778.883 ; gain = 71.234
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1778.883 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1777.230 ; gain = 138.418
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1777.230 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1788.754 ; gain = 9.871
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1787.121 ; gain = 9.891
 INFO: [Common 17-1381] The checkpoint 'C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file uart_top_drc_routed.rpt -pb uart_top_drc_routed.pb -rpx uart_top_drc_routed.rpx
 Command: report_drc -file uart_top_drc_routed.rpt -pb uart_top_drc_routed.pb -rpx uart_top_drc_routed.rpx
@@ -699,7 +742,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-102 Infos, 43 Warnings, 43 Critical Warnings and 0 Errors encountered.
+95 Infos, 66 Warnings, 68 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file uart_top_route_status.rpt -pb uart_top_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file uart_top_timing_summary_routed.rpt -pb uart_top_timing_summary_routed.pb -rpx uart_top_timing_summary_routed.rpx -warn_on_violation 
@@ -739,7 +782,7 @@ Writing bitstream ./uart_top.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-121 Infos, 44 Warnings, 43 Critical Warnings and 0 Errors encountered.
+114 Infos, 67 Warnings, 68 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2251.043 ; gain = 438.512
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 16 00:02:02 2024...
+write_bitstream: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2253.512 ; gain = 433.730
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 24 18:34:19 2024...

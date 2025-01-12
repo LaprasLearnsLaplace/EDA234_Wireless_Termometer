@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Dec 20 15:48:25 2024
+# Process ID: 28048
+# Current directory: C:/Users/A/Desktop/EDA234/test/test.runs/printf_synth_1
+# Command line: vivado.exe -log printf.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source printf.tcl
+# Log file: C:/Users/A/Desktop/EDA234/test/test.runs/printf_synth_1/printf.vds
+# Journal file: C:/Users/A/Desktop/EDA234/test/test.runs/printf_synth_1\vivado.jou
+#-----------------------------------------------------------
+source printf.tcl -notrace

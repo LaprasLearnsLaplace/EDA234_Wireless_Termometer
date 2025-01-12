@@ -75,6 +75,7 @@ set rc [catch {
   set_property ip_output_repo C:/Users/A/Desktop/EDA234/test/test.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet C:/Users/A/Desktop/EDA234/test/test.runs/synth_1/uart_top.dcp
+  read_ip -quiet C:/Users/A/Desktop/EDA234/test/test.srcs/sources_1/ip/printf/printf.xci
   read_xdc C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc
   link_design -top uart_top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb

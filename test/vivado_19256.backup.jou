@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Dec 23 13:58:09 2024
+# Process ID: 19256
+# Current directory: C:/Users/A/Desktop/EDA234/test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15776 C:\Users\A\Desktop\EDA234\test\test.xpr
+# Log file: C:/Users/A/Desktop/EDA234/test/vivado.log
+# Journal file: C:/Users/A/Desktop/EDA234/test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/A/Desktop/EDA234/test/test.xpr
+export_ip_user_files -of_objects  [get_files C:/Users/A/Desktop/find_max_min.vhd] -no_script -reset -force -quiet
+remove_files  C:/Users/A/Desktop/find_max_min.vhd
+add_files -norecurse {C:/Users/A/Desktop/UART/uart_top.vhdl C:/Users/A/Desktop/UART/uart_rx.vhdl C:/Users/A/Desktop/UART/fifo.vhdl C:/Users/A/Desktop/UART/uart_tx.vhdl}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top uart_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/A/Desktop/EDA234/test/test.runs/impl_1/uart_top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 20
+wait_on_run impl_1

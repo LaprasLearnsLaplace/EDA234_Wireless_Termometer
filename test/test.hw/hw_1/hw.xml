@@ -13,5 +13,34 @@
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="min_temp_reg[7:0]" gui_info="hw_vios/hw_vio_1=0_exp"/>
+  </ObjectList>
+  <ObjectList object_type="hw_vio" gui_info="">
+    <Object name="hw_vio_1" gui_info="hw_vios/hw_vio_1/TablePreference=5	870	Name	0	2147483647	15	222	222	Value	1	2147483647	15	449	449	Activity	2	2147483647	15	15	15	Direction	3	2147483647	15	84	84	VIO	4	2147483647	15	100	100			1	6	1	Name	Value	Activity	Direction	VIO"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="vio_input" busType="net" source="netlist" spec="VIO_INPUT_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="ACTIVITY_PERSISTENCE" value="SHORT"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_VIO" value="hw_vio_1"/>
+        <Option Id="INPUT_VALUE_RADIX" value="BINARY"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+      </probeOptions>
+      <nets>
+        <net name="min_temp_reg[7]"/>
+        <net name="min_temp_reg[6]"/>
+        <net name="min_temp_reg[5]"/>
+        <net name="min_temp_reg[4]"/>
+        <net name="min_temp_reg[3]"/>
+        <net name="min_temp_reg[2]"/>
+        <net name="min_temp_reg[1]"/>
+        <net name="min_temp_reg[0]"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

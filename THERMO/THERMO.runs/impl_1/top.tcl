@@ -66,6 +66,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -73,8 +74,11 @@ set rc [catch {
   set_property parent.project_path C:/Users/A/Desktop/EDA234/THERMO/THERMO.xpr [current_project]
   set_property ip_output_repo C:/Users/A/Desktop/EDA234/THERMO/THERMO.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   add_files -quiet C:/Users/A/Desktop/EDA234/THERMO/THERMO.runs/synth_1/top.dcp
   read_ip -quiet C:/Users/A/Desktop/EDA234/THERMO/THERMO.srcs/sources_1/ip/printf/printf.xci
+  read_ip -quiet C:/Users/A/Desktop/EDA234/THERMO/THERMO.srcs/sources_1/ip/clk_wiz/clk_wiz.xci
+  read_ip -quiet C:/Users/A/Desktop/EDA234/THERMO/THERMO.srcs/sources_1/ip/MIG/MIG.xci
   read_xdc C:/Users/A/Desktop/EDA234/CONSTRAINS.xdc
   link_design -top top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
@@ -171,6 +175,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force top.mmi }
   write_bitstream -force top.bit 
   catch {write_debug_probes -quiet -force top}

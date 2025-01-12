@@ -15,7 +15,7 @@
                     },
                     {
                         "type": "VIO_V2",
-                        "name": "printRX",
+                        "name": "find_inst/print1",
                         "spec": "labtools_vio_v3",
                         "ipName": "vio",
                         "core_location": {
@@ -23,7 +23,7 @@
                             "slave_index": 0,
                             "bscan_switch_index": 0
                         },
-                        "uuid": "5665932A41425D97A94917EF0113BDA1",
+                        "uuid": "FCFC47AB579256A781D36F725BC2A612",
                         "pins": [
                             {
                                 "name": "probe_in0",
@@ -36,32 +36,88 @@
                                 "portIndex": 0,
                                 "nets": [
                                     {
-                                        "name": "wire_rxdata",
+                                        "name": "find_inst/min_temp_reg",
                                         "isBus": true,
                                         "subnets": [
                                             {
-                                                "name": "wire_rxdata[7]"
+                                                "name": "find_inst/min_temp_reg[7]"
                                             },
                                             {
-                                                "name": "wire_rxdata[6]"
+                                                "name": "find_inst/min_temp_reg[6]"
                                             },
                                             {
-                                                "name": "wire_rxdata[5]"
+                                                "name": "find_inst/min_temp_reg[5]"
                                             },
                                             {
-                                                "name": "wire_rxdata[4]"
+                                                "name": "find_inst/min_temp_reg[4]"
                                             },
                                             {
-                                                "name": "wire_rxdata[3]"
+                                                "name": "find_inst/min_temp_reg[3]"
                                             },
                                             {
-                                                "name": "wire_rxdata[2]"
+                                                "name": "find_inst/min_temp_reg[2]"
                                             },
                                             {
-                                                "name": "wire_rxdata[1]"
+                                                "name": "find_inst/min_temp_reg[1]"
                                             },
                                             {
-                                                "name": "wire_rxdata[0]"
+                                                "name": "find_inst/min_temp_reg[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "VIO_V2",
+                        "name": "find_inst/print2",
+                        "spec": "labtools_vio_v3",
+                        "ipName": "vio",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 1,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "3D7FB38753C95874A3A87B5110C02966",
+                        "pins": [
+                            {
+                                "name": "probe_in0",
+                                "id": 1,
+                                "type": "DATA",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "find_inst/max_temp_reg",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "find_inst/max_temp_reg[7]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[6]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[5]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[4]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[3]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[2]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[1]"
+                                            },
+                                            {
+                                                "name": "find_inst/max_temp_reg[0]"
                                             }
                                         ]
                                     }
