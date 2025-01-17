@@ -1,15 +1,20 @@
-该项目是 **EDA234 ** 的课程设计，目标是设计一个 **基于 FPGA 的多功能温度计**，能够检测并显示室内外温度，并具备最大值和最小值记录功能。本项目使用 **VHDL** 进行硬件设计，并在 **Nexys A7 FPGA 开发板** 上实现。
+# Project Overview
 
-## **项目功能**
+This project is part of the **EDA234** course design, aiming to develop a **Multi-functional Thermometer Based on FPGA**. The system can detect and display indoor and outdoor temperatures, with maximum and minimum value recording capabilities. The project is implemented using **VHDL** on a **Nexys A7 FPGA Development Board**.
 
-- **温度检测**
-  - 使用 **DS18S20 温度传感器** 实现室内外温度检测。
-  - 使用 FPGA 内部的 **XADC 模块** 作为备用温度传感器。
-- **温度显示**
-  - 支持 **LCD 显示 (DMC 16117A)** 和 **7 段数码管显示**。
-  - 显示当前温度、最高温度和最低温度。
-- **数据记录**
-  - 支持最大值和最小值温度记录，并提供 **时间戳**。
-  - 用户可以通过按键 **重置最大/最小温度记录**。
-- **无线通信**
-  - 使用 **蓝牙模块** 实现室内外温度数据的无线传输。
+## Project Features
+
+- **Temperature Detection**
+  - Uses **DS18B20 temperature sensor** for outdoor temperature detection
+  - Uses **ADT7420** for indoor temperature sensor
+
+- **Temperature Display**
+  - Supports **LCD display (DMC 16117A)**, **OLED display**, and **7-segment display**
+  - Shows current temperature, maximum and minimum temperature readings
+
+- **Data Recording**
+  - Records maximum and minimum temperature values
+  - Users can **reset maximum/minimum temperature records** via push buttons
+
+- **Wireless Communication**
+  - Implements **Bluetooth module** for wireless transmission of indoor/outdoor temperature data
