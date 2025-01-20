@@ -4,8 +4,8 @@ use ieee.numeric_std.all;
 
 entity CLK_div_100 is
     port (
-        clk_in  : in  std_logic;
-        clk_out : buffer std_logic 
+        clk_in  : in  std_logic; -- 100MHz input clock
+        clk_out : buffer std_logic -- 1MHz output clock
     );
 end entity CLK_div_100;
 
