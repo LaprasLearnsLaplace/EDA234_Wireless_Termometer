@@ -1,0 +1,131 @@
+Cmp-Mod V01 Created by PcbNew   date = 2024-12-09T16:27:01+0100
+
+BeginCmp
+TimeStamp = 1da704cb-e2b1-4c48-a4a0-60510103c8d7
+Path = /353f3077-5c74-4070-b293-12fe97a08316
+Reference = J1;
+ValeurCmp = Conn_02x06_Top_Bottom;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 25f4f2e3-4129-4e1a-b26b-4efaafa6bc42
+Path = /78d60965-07ca-4cd1-8815-ea3ec9a2d462
+Reference = BT1;
+ValeurCmp = Battery_Cell;
+IdModule  = Battery:BatteryHolder_MYOUNG_BS-07-A1BJ001_CR2032;
+EndCmp
+
+BeginCmp
+TimeStamp = 4e5740e4-a5d8-4287-8c6d-228421e11d0a
+Path = /f1e460a1-5503-4ccf-8102-fd7d59da2bdb
+Reference = power;
+ValeurCmp = LED;
+IdModule  = LED_SMD:LED_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 569e318a-fbc8-4c88-82c4-da828426e6f0
+Path = /8792a9d6-0077-48a7-ab14-78332305236e
+Reference = C5;
+ValeurCmp = 100n;
+IdModule  = Capacitor_SMD:C_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 5bfd7239-dd3c-4fd6-9873-0915048b7dfe
+Path = /86223721-c11f-484e-9fda-079a6f2875bc
+Reference = Y1;
+ValeurCmp = Crystal;
+IdModule  = Crystal:Crystal_AT310_D3.0mm_L10.0mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 72c64af0-0cb5-4349-b0f6-75da7b7e4d03
+Path = /c1bdde52-edfc-4dab-8aaf-248d173c2444
+Reference = C1;
+ValeurCmp = 100n;
+IdModule  = Capacitor_SMD:C_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 75f2f983-c531-4872-9568-06d071556c8a
+Path = /aeaf189f-5dcb-41b2-aa6b-26770da0aff9
+Reference = C2;
+ValeurCmp = 10u;
+IdModule  = Capacitor_SMD:C_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 93e08358-c0d5-4cd0-ac79-412d6438c957
+Path = /f81876bc-9cce-43c7-9cad-57ecd226d871
+Reference = C3;
+ValeurCmp = 100n;
+IdModule  = Capacitor_SMD:C_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 97f56449-20ef-4534-934f-d25306863746
+Path = /84400208-24cc-46cf-b659-f58f29dc16ed
+Reference = U1;
+ValeurCmp = DS1302+;
+IdModule  = Package_DIP:DIP-8_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 9a7e18a8-9a4c-47cd-93cf-532515a7e929
+Path = /23f8d412-3f4c-4940-912c-906a7b4c0772
+Reference = R3;
+ValeurCmp = 4.7k;
+IdModule  = Resistor_SMD:R_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = 9f79ad87-4dc2-4046-baf9-fee4ec77a819
+Path = /a83e4aef-852b-4b1e-a63f-f51cd2ab9254
+Reference = R1;
+ValeurCmp = R;
+IdModule  = Resistor_SMD:R_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = af761d9c-c8c5-4378-911f-1bfa8ceaed28
+Path = /7d3d12a3-5eaf-4e59-84e0-ae6b3ceb7f2d
+Reference = U2;
+ValeurCmp = HDC2080;
+IdModule  = Package_SON:Texas_PWSON-N6;
+EndCmp
+
+BeginCmp
+TimeStamp = b23c0039-86d3-4d86-97fd-a04d60d701cf
+Path = /8e68234a-6bab-436c-b45e-13080b497710
+Reference = R2;
+ValeurCmp = 4.7k;
+IdModule  = Resistor_SMD:R_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = c2610fec-f65a-45f4-979b-4350594ca546
+Path = /2ae0bef1-f143-4639-8042-c4f9145d2858
+Reference = U3;
+ValeurCmp = DS18S20;
+IdModule  = Package_TO_SOT_THT:TO-92_Inline;
+EndCmp
+
+BeginCmp
+TimeStamp = c9fa8454-e886-4586-97a7-37d162f48b2b
+Path = /b3badb6d-51a5-4e1c-a661-5679a965d329
+Reference = C4;
+ValeurCmp = 100n;
+IdModule  = Capacitor_SMD:C_0805_2012Metric;
+EndCmp
+
+BeginCmp
+TimeStamp = d57ecf27-d173-4884-9a55-2be2ea33fccf
+Path = /43f4e452-af62-4218-897e-1849f2f651dc
+Reference = R4;
+ValeurCmp = 4.7k;
+IdModule  = Resistor_SMD:R_0805_2012Metric;
+EndCmp
+
+EndListe
