@@ -1,20 +1,41 @@
-# Project Overview
+# EDA234 Wireless Temperature Monitoring System
 
-This project is part of the **EDA234** course design, aiming to develop a **Multi-functional Thermometer Based on FPGA**. The system can detect and display indoor and outdoor temperatures, with maximum and minimum value recording capabilities. The project is implemented using **VHDL** on a **Nexys A7 FPGA Development Board**.
+FPGA-based indoor/outdoor temperature monitoring system developed for EDA234 Digital Project Laboratory course at Chalmers University of Technology, implemented on Nexys A7 FPGA development board using VHDL.
 
-## Project Features
+### Temperature Sensing
+- Indoor: ADT7420 with I2C protocol 
+- Outdoor: DS18B20 with 1-Wire protocol 
 
-- **Temperature Detection**
-  - Uses **DS18B20 temperature sensor** for outdoor temperature detection
-  - Uses **ADT7420** for indoor temperature sensor
+### Display System
+- LCD Display (DMC16117A): Detailed temperature info
+- OLED Display: Outdoor unit visualization  
+- Seven-segment Display: Time (outdoor) and temperature (indoor)
 
-- **Temperature Display**
-  - Supports **LCD display (DMC 16117A)**, **OLED display**, and **7-segment display**
-  - Shows current temperature, maximum and minimum temperature readings
+### Data Management
+- DDR2 SDRAM for data storage
+- Maximum/minimum temperature tracking
+- Real-time clock (DS1302) for temporal logging
+- User-configurable temperature thresholds
 
-- **Data Recording**
-  - Records maximum and minimum temperature values
-  - Users can **reset maximum/minimum temperature records** via push buttons
+### Interface & Control
+- 4x4 matrix keyboard for settings
+- Bluetooth communication (9600 baud)
+- Configurable alarm system 
+- FPGA onboard buttons/switches
 
-- **Wireless Communication**
-  - Implements **Bluetooth module** for wireless transmission of indoor/outdoor temperature data
+## Hardware Requirements
+
+- Nexys A7-100T FPGA Board
+- DMC16117A LCD Module  
+- DS1302 RTC Module
+- HC-06 Bluetooth Module
+- HS96L01W4S03 OLED Display
+- 4x4 Matrix Keyboard
+- DS18B20 Temperature Sensor
+- ADT7420 Temperature Sensor
+
+## Project Structure
+-  Indoor unit VHDL implementation
+- `outdoor/`: Outdoor unit VHDL implementation
+- `Board/`: PCB board files
+
